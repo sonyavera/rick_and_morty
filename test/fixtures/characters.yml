@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  status: MyString
+  species: MyString
+  type: 
+  gender: MyString
+  origin_name: MyString
+  origin_link: MyString
+  location_name: MyString
+  location_link: MyString
+  image: MyString
+  episode: MyText
+  url: MyString
+  created: MyString
+
+two:
+  name: MyString
+  status: MyString
+  species: MyString
+  type: 
+  gender: MyString
+  origin_name: MyString
+  origin_link: MyString
+  location_name: MyString
+  location_link: MyString
+  image: MyString
+  episode: MyText
+  url: MyString
+  created: MyString

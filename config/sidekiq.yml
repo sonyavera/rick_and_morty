@@ -1,0 +1,8 @@
+---
+:queues:
+  - default
+
+:schedule:
+  fetch_and_store_characters:
+    cron: "*/30 * * * *"
+    class: "CharacterFetchWorker"
