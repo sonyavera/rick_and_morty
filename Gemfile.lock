@@ -92,7 +92,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    chronic (0.10.2)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crack (0.4.5)
@@ -110,6 +109,11 @@ GEM
     drb (2.1.1)
       ruby2_keywords
     erubi (1.12.0)
+    et-orbi (1.2.7)
+      tzinfo
+    fugit (1.9.0)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.0.1)
@@ -160,6 +164,7 @@ GEM
     public_suffix (5.0.3)
     puma (6.4.0)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.7.1)
     rack (3.0.8)
     rack-session (2.0.0)
@@ -201,8 +206,7 @@ GEM
     rake (13.1.0)
     rdoc (6.5.0)
       psych (>= 4.0.0)
-    redis (5.0.8)
-      redis-client (>= 0.17.0)
+    redis (4.8.1)
     redis-client (0.18.0)
       connection_pool
     regexp_parser (2.8.2)
@@ -242,6 +246,10 @@ GEM
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
       redis-client (>= 0.14.0)
+    sidekiq-cron (1.10.1)
+      fugit (~> 1.8)
+      globalid (>= 1.0.1)
+      sidekiq (>= 6)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -279,8 +287,6 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    whenever (1.0.0)
-      chronic (>= 0.6.3)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.12)
@@ -299,11 +305,12 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.1)
-  redis (>= 4.0.1)
+  redis (>= 4.0.1, < 5)
   rspec-rails (~> 5.0)
   rspec-sidekiq
   selenium-webdriver
   sidekiq
+  sidekiq-cron (~> 1.2)
   sprockets-rails
   stimulus-rails
   turbo-rails
@@ -312,7 +319,6 @@ DEPENDENCIES
   web-console
   webdrivers
   webmock
-  whenever
 
 RUBY VERSION
    ruby 2.7.4p191

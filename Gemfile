@@ -26,14 +26,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'sidekiq'
-
 gem 'byebug'
-
-# Use Redis adapter to run Action Cable in production
-gem "redis", ">= 4.0.1"
-
-gem 'whenever', require: false
 
 gem 'vcr'
 
@@ -43,6 +36,11 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'rspec-sidekiq'
 
+gem 'sidekiq-cron', '~> 1.2'
+
+gem 'sidekiq'
+
+gem 'redis', '>= 4.0.1', '< 5'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
